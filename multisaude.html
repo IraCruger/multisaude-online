@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Saúde · Planos de saúde com pós-venda de verdade</title>
+<meta name="description" content="Corretora com 25 anos de mercado. Comparamos as principais operadoras do Brasil e cuidamos de você antes, durante e depois da contratação. Receba sua cotação pelo WhatsApp.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Multi Saúde · Planos de saúde com pós-venda de verdade">
+<meta property="og:description" content="25 anos comparando as melhores operadoras do Brasil. Cotação gratuita pelo WhatsApp.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics — substitua G-XXXXXXXXXX pelo seu ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+  :root{
+    --bg:#F4F7F5;
+    --surface:#FFFFFF;
+    --ink:#0B231E;
+    --deep:#08332C;
+    --deep-2:#0B4A3D;
+    --brand:#0E7B5B;
+    --brand-strong:#0B5E47;
+    --accent:#C7A35A;
+    --muted:#5C706A;
+    --line:#E1E9E5;
+    --line-dark:rgba(255,255,255,.12);
+    --radius:18px;
+    --radius-sm:12px;
+    --shadow:0 1px 2px rgba(8,51,44,.04), 0 18px 40px -22px rgba(8,51,44,.28);
+    --shadow-soft:0 1px 2px rgba(8,51,44,.05), 0 10px 30px -24px rgba(8,51,44,.4);
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{font-family:'Sora',sans-serif;line-height:1.08;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--brand);color:#fff}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-family:'Sora',sans-serif;font-size:12px;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--brand);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}
+  .eyebrow.on-dark{color:#7FD9BC}
+  .eyebrow.on-dark::before{background:var(--accent)}
+  .serif-accent{font-family:'Newsreader',serif;font-style:italic;font-weight:500}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:'Sora',sans-serif;font-weight:600;font-size:15px;
+    padding:14px 24px;border-radius:999px;border:1px solid transparent;
+    cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 24px -12px rgba(14,123,91,.8)}
+  .btn-primary:hover{background:var(--brand-strong);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+  .btn-wa{background:#1FA75A;color:#fff}
+  .btn-wa:hover{background:#188c4b;transform:translateY(-2px)}
+  .btn-block{width:100%}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(244,247,245,.82);backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;transition:border-color .3s, background .3s;
+  }
+  header.scrolled{border-bottom-color:var(--line);background:rgba(244,247,245,.94)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Sora',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+  .brand .mark{
+    width:34px;height:34px;border-radius:9px;flex:none;
+    background:linear-gradient(135deg,var(--brand),var(--deep-2));
+    display:grid;place-items:center;color:#fff;box-shadow:var(--shadow-soft);
+  }
+  .brand .mark svg{width:19px;height:19px}
+  .brand small{display:block;font-family:'Inter';font-weight:500;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:1px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--muted);transition:color .15s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{font-family:'Sora';font-weight:600;font-size:14.5px;color:var(--ink)}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+  /* Hero */
+  .hero{position:relative;padding:64px 0 72px;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;right:-12%;top:-18%;width:620px;height:620px;
+    background:radial-gradient(circle at center, rgba(14,123,91,.12), transparent 62%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(34px,4.4vw,56px);font-weight:700;margin:20px 0 18px}
+  .hero h1 .serif-accent{color:var(--brand)}
+  .hero p.lead{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:28px}
+
+  .selector{margin:30px 0 22px}
+  .selector-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:11px;font-family:'Sora'}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{
+    font-family:'Sora';font-weight:500;font-size:14px;
+    padding:10px 17px;border-radius:999px;border:1px solid var(--line);
+    background:var(--surface);color:var(--muted);cursor:pointer;
+    transition:all .16s ease;display:inline-flex;align-items:center;gap:8px;
+  }
+  .chip:hover{border-color:var(--brand);color:var(--ink)}
+  .chip[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
+  .chip[aria-pressed="true"] .dot{background:var(--accent)}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--line);transition:background .16s}
+
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-note{font-size:13.5px;color:var(--muted);margin-top:18px;display:flex;align-items:center;gap:8px}
+  .hero-note svg{width:16px;height:16px;color:var(--brand);flex:none}
+
+  /* Hero visual card */
+  .hero-card{
+    background:var(--surface);border-radius:var(--radius);border:1px solid var(--line);
+    box-shadow:var(--shadow);padding:28px;position:relative;
+  }
+  .hero-card .ribbon{
+    position:absolute;top:-13px;left:28px;background:var(--accent);color:#3a2c08;
+    font-family:'Sora';font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;
+  }
+  .hero-card h3{font-size:19px;margin:8px 0 4px}
+  .hero-card .hc-sub{font-size:13.5px;color:var(--muted);margin-bottom:20px}
+  .hc-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--line)}
+  .hc-row:first-of-type{border-top:none}
+  .hc-row .lbl{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:11px}
+  .hc-row .lbl .ic{width:34px;height:34px;border-radius:9px;background:#EAF4EF;color:var(--brand);display:grid;place-items:center;flex:none}
+  .hc-row .lbl .ic svg{width:17px;height:17px}
+  .hc-row .val{font-family:'Sora';font-weight:600;font-size:14px}
+  .hero-card .hc-cta{margin-top:20px}
+
+  /* Logos strip */
+  .logos{background:var(--deep);color:#fff;padding:26px 0}
+  .logos .wrap{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center}
+  .logos .ltxt{font-family:'Sora';font-weight:600;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.55)}
+  .logos .lname{font-family:'Sora';font-weight:600;font-size:16px;color:rgba(255,255,255,.92);white-space:nowrap}
+
+  /* Section base */
+  section.block{padding:88px 0}
+  .sec-head{max-width:640px;margin-bottom:48px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(28px,3.2vw,40px);font-weight:700;margin:16px 0 14px}
+  .sec-head p{font-size:17px;color:var(--muted)}
+
+  /* Stats */
+  .stats{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+  .stat{background:var(--surface);padding:38px 24px;text-align:center}
+  .stat .num{font-family:'Sora';font-weight:800;font-size:42px;letter-spacing:-.03em;color:var(--deep);line-height:1}
+  .stat .num span{color:var(--accent)}
+  .stat .cap{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+  /* Plan cards */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .plan{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+    display:flex;flex-direction:column;position:relative;overflow:hidden;
+  }
+  .plan::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .plan:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+  .plan:hover::after{transform:scaleX(1)}
+  .plan.featured{background:var(--deep);border-color:var(--deep);color:#fff}
+  .plan.featured .plan-desc,.plan.featured .plan-li{color:rgba(255,255,255,.78)}
+  .plan.featured::after{background:var(--accent)}
+  .plan-tag{font-family:'Sora';font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .plan-ic{width:48px;height:48px;border-radius:12px;background:#EAF4EF;color:var(--brand);display:grid;place-items:center;margin-bottom:18px}
+  .plan.featured .plan-ic{background:rgba(255,255,255,.1);color:#fff}
+  .plan-ic svg{width:23px;height:23px}
+  .plan h3{font-size:21px;margin-bottom:9px}
+  .plan-desc{font-size:14.5px;color:var(--muted);margin-bottom:18px}
+  .plan-list{list-style:none;margin-bottom:24px;flex:1}
+  .plan-li{font-size:14px;color:var(--ink);padding:7px 0;display:flex;align-items:flex-start;gap:10px}
+  .plan-li svg{width:16px;height:16px;color:var(--brand);flex:none;margin-top:3px}
+  .plan.featured .plan-li svg{color:var(--accent)}
+  .plan .btn{margin-top:auto}
+
+  /* Diferenciais */
+  .why{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+  .why::before{content:"";position:absolute;left:-10%;bottom:-30%;width:560px;height:560px;background:radial-gradient(circle,rgba(199,163,90,.14),transparent 64%)}
+  .why .sec-head h2{color:#fff}
+  .why .sec-head p{color:rgba(255,255,255,.7)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+  .why-item{padding:28px;border:1px solid var(--line-dark);border-radius:var(--radius);background:rgba(255,255,255,.03)}
+  .why-item .wic{width:46px;height:46px;border-radius:12px;background:rgba(199,163,90,.16);color:var(--accent);display:grid;place-items:center;margin-bottom:18px}
+  .why-item .wic svg{width:22px;height:22px}
+  .why-item h3{font-size:18px;color:#fff;margin-bottom:9px}
+  .why-item p{font-size:14px;color:rgba(255,255,255,.66)}
+
+  /* Quote / form */
+  .quote{background:var(--surface);border-top:1px solid var(--line)}
+  .quote-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:start}
+  .quote-copy .checklist{list-style:none;margin-top:26px;display:grid;gap:14px}
+  .quote-copy .checklist li{display:flex;gap:13px;font-size:15px;color:var(--ink)}
+  .quote-copy .checklist .ck{width:26px;height:26px;border-radius:50%;background:#EAF4EF;color:var(--brand);display:grid;place-items:center;flex:none}
+  .quote-copy .checklist .ck svg{width:14px;height:14px}
+  .quote-trust{margin-top:34px;padding:20px;border-radius:var(--radius-sm);background:var(--bg);border:1px solid var(--line);display:flex;gap:14px;align-items:center}
+  .quote-trust .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--deep-2));color:#fff;display:grid;place-items:center;font-family:'Sora';font-weight:700;flex:none}
+  .quote-trust p{font-size:13.5px;color:var(--muted)}
+  .quote-trust strong{color:var(--ink);font-family:'Sora';font-weight:600}
+
+  form.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow-soft)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  .field.full{grid-column:1 / -1}
+  label.fl{display:block;font-family:'Sora';font-size:13px;font-weight:600;margin-bottom:7px}
+  .field input,.field select{
+    width:100%;font-family:'Inter';font-size:15px;padding:13px 15px;
+    border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--ink);
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(14,123,91,.12)}
+  .field input::placeholder{color:#9DAAA5}
+  .form-foot{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center;display:flex;align-items:center;justify-content:center;gap:7px}
+  .form-foot svg{width:14px;height:14px;color:var(--brand)}
+
+  /* Operadoras full grid */
+  .op-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .op{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+    padding:22px 14px;text-align:center;font-family:'Sora';font-weight:600;font-size:14.5px;color:var(--ink);
+    transition:all .16s;display:flex;align-items:center;justify-content:center;min-height:74px;
+  }
+  .op:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+  .op .star{color:var(--accent);font-size:11px;margin-left:6px}
+
+  /* FAQ */
+  .faq-list{max-width:780px;margin:0 auto}
+  .faq{border-bottom:1px solid var(--line)}
+  .faq button{
+    width:100%;background:none;border:none;cursor:pointer;text-align:left;
+    padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    font-family:'Sora';font-weight:600;font-size:17px;color:var(--ink);
+  }
+  .faq button:focus-visible{outline:2px solid var(--brand);outline-offset:4px;border-radius:6px}
+  .faq .ic-plus{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:.25s;color:var(--brand)}
+  .faq[aria-expanded="true"] .ic-plus{background:var(--brand);border-color:var(--brand);color:#fff;transform:rotate(45deg)}
+  .faq .ans{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq .ans p{padding:0 0 24px;font-size:15.5px;color:var(--muted);max-width:680px}
+
+  /* About */
+  .about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-visual{position:relative}
+  .about-frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:linear-gradient(150deg,var(--deep),var(--brand-strong));position:relative}
+  .about-frame .pat{position:absolute;inset:0;opacity:.5;background:
+    radial-gradient(circle at 22% 30%, rgba(199,163,90,.4),transparent 30%),
+    radial-gradient(circle at 78% 72%, rgba(255,255,255,.16),transparent 38%)}
+  .about-frame .quote-mark{position:absolute;left:34px;top:28px;font-family:'Newsreader',serif;font-style:italic;font-size:120px;color:rgba(255,255,255,.16);line-height:1}
+  .about-frame blockquote{position:absolute;left:34px;right:34px;bottom:34px;color:#fff;font-family:'Newsreader',serif;font-style:italic;font-size:23px;line-height:1.35}
+  .about-badge{position:absolute;right:-18px;bottom:-18px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 22px;box-shadow:var(--shadow);text-align:center}
+  .about-badge .n{font-family:'Sora';font-weight:800;font-size:34px;color:var(--deep);line-height:1}
+  .about-badge .c{font-size:12px;color:var(--muted);margin-top:4px}
+  .about-copy h2{font-size:clamp(28px,3.2vw,40px);margin:16px 0 18px;font-weight:700}
+  .about-copy p{color:var(--muted);font-size:16px;margin-bottom:16px}
+  .about-copy .sign{margin-top:24px;font-family:'Sora';font-weight:600;font-size:15px}
+  .about-copy .sign small{display:block;color:var(--muted);font-weight:400;font-family:'Inter';font-size:13px;margin-top:2px}
+
+  /* CTA band */
+  .cta-band{background:var(--deep);color:#fff;text-align:center;padding:80px 0;position:relative;overflow:hidden}
+  .cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -10%,rgba(199,163,90,.18),transparent 50%)}
+  .cta-band .wrap{position:relative}
+  .cta-band h2{font-size:clamp(28px,3.4vw,42px);font-weight:700;margin-bottom:16px}
+  .cta-band p{color:rgba(255,255,255,.72);font-size:18px;max-width:560px;margin:0 auto 30px}
+
+  /* Footer */
+  footer{background:#06231D;color:rgba(255,255,255,.7);padding:64px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .brand{color:#fff;margin-bottom:16px}
+  footer .brand small{color:rgba(255,255,255,.5)}
+  .foot-about{font-size:14px;color:rgba(255,255,255,.6);max-width:300px}
+  .foot-col h4{font-family:'Sora';font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+  .foot-col a,.foot-col p{display:block;font-size:14px;color:rgba(255,255,255,.65);margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:#fff}
+  .foot-col .lh{display:flex;gap:9px;align-items:flex-start}
+  .foot-col .lh svg{width:16px;height:16px;color:var(--accent);flex:none;margin-top:3px}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:26px;font-size:12.5px;color:rgba(255,255,255,.45)}
+  .foot-bottom .socials{display:flex;gap:10px}
+  .foot-bottom .socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;color:rgba(255,255,255,.7);transition:.18s}
+  .foot-bottom .socials a:hover{background:var(--brand);border-color:var(--brand);color:#fff}
+  .foot-bottom .socials svg{width:17px;height:17px}
+  .foot-disclaimer{font-size:11px;color:rgba(255,255,255,.35);margin-top:18px;max-width:880px;line-height:1.5}
+
+  /* Floating WhatsApp */
+  .wa-float{
+    position:fixed;right:22px;bottom:22px;z-index:80;
+    display:flex;align-items:center;gap:0;
+    background:#1FA75A;color:#fff;border-radius:999px;
+    padding:0;height:60px;box-shadow:0 14px 34px -10px rgba(31,167,90,.7);
+    overflow:hidden;transition:gap .25s ease, padding .25s ease;
+  }
+  .wa-float .wa-ic{width:60px;height:60px;display:grid;place-items:center;flex:none}
+  .wa-float .wa-ic svg{width:30px;height:30px}
+  .wa-float .wa-label{max-width:0;white-space:nowrap;font-family:'Sora';font-weight:600;font-size:15px;overflow:hidden;transition:max-width .25s ease, padding .25s ease;padding-right:0}
+  .wa-float:hover .wa-label{max-width:220px;padding-right:24px}
+  .wa-pulse{position:absolute;inset:0;border-radius:999px;box-shadow:0 0 0 0 rgba(31,167,90,.5);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,167,90,.45)}70%{box-shadow:0 0 0 16px rgba(31,167,90,0)}100%{box-shadow:0 0 0 0 rgba(31,167,90,0)}}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Responsive */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-card{max-width:480px}
+    .quote-grid,.about-grid{grid-template-columns:1fr;gap:40px}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .plans-grid{grid-template-columns:1fr 1fr}
+    .op-grid{grid-template-columns:repeat(4,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+    .about-badge{right:12px;bottom:-14px}
+  }
+  @media (max-width:720px){
+    .nav-links,.nav-phone{display:none}
+    .menu-toggle{display:block}
+    .mobile-menu{display:none;flex-direction:column;gap:4px;padding:14px 24px 22px;background:var(--surface);border-bottom:1px solid var(--line)}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{padding:12px 0;font-family:'Sora';font-weight:500;color:var(--ink);border-bottom:1px solid var(--line)}
+    .mobile-menu .btn{margin-top:12px}
+    section.block{padding:62px 0}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .plans-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+    .op-grid{grid-template-columns:repeat(2,1fr)}
+    .form-row{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .hero{padding:42px 0 54px}
+    .stat .num{font-size:34px}
+    .about-frame blockquote{font-size:19px}
+    .wa-float .wa-label{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Multi Saúde - início">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C1 9 2.5 5 6.5 5 9 5 12 7.5 12 7.5S15 5 17.5 5C21.5 5 23 9 21.5 12 19 16.65 12 21 12 21Z" fill="currentColor"/><path d="M7 12h2l1.2-2.2L12.4 14l1.1-2h3.5" stroke="#08332C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>Multi Saúde<small>Corretora · 25 anos</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#planos">Planos</a>
+      <a href="#operadoras">Operadoras</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#cotacao">Cotação</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="nav-phone">(51) 98222-6079</span>
+      <a class="btn btn-primary" href="#cotacao">Fazer cotação</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#planos">Planos</a>
+    <a href="#operadoras">Operadoras</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#cotacao">Cotação</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#sobre">Sobre</a>
+    <a class="btn btn-primary btn-block" href="#cotacao">Fazer cotação</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Planos de saúde · Todo o Brasil</span>
+      <h1>O plano certo, escolhido por quem cuida de você <span class="serif-accent">há 25 anos.</span></h1>
+      <p class="lead">Comparamos as principais operadoras do país e indicamos a melhor opção para o seu perfil. Sem custo, sem complicação — e com um pós-venda que continua do seu lado depois da contratação.</p>
+
+      <div class="selector">
+        <p class="selector-label">O plano é para quem?</p>
+        <div class="chips" role="group" aria-label="Escolha o perfil do plano">
+          <button class="chip" data-profile="para mim (plano individual)" aria-pressed="false"><span class="dot"></span>Para mim</button>
+          <button class="chip" data-profile="minha família" aria-pressed="false"><span class="dot"></span>Família</button>
+          <button class="chip" data-profile="minha empresa" aria-pressed="false"><span class="dot"></span>Empresa</button>
+          <button class="chip" data-profile="MEI" aria-pressed="false"><span class="dot"></span>MEI</button>
+          <button class="chip" data-profile="plano 60+ (sênior)" aria-pressed="false"><span class="dot"></span>60+</button>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-wa" id="heroWa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.97-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Cotar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#planos">Ver tipos de plano</a>
+      </div>
+      <p class="hero-note">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+        Cotação gratuita · resposta no mesmo dia · sem compromisso
+      </p>
+    </div>
+
+    <aside class="hero-card reveal" aria-label="Resumo da corretora">
+      <span class="ribbon">Atendimento direto</span>
+      <h3>Por que com a Multi Saúde?</h3>
+      <p class="hc-sub">Uma corretora, todas as operadoras, uma única conversa.</p>
+      <div class="hc-row">
+        <span class="lbl"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>Operadoras parceiras</span>
+        <span class="val">12 marcas</span>
+      </div>
+      <div class="hc-row">
+        <span class="lbl"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M21 7v6M7 9v5c0 1 2.2 3 5 3s5-2 5-3V9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Experiência</span>
+        <span class="val">25 anos</span>
+      </div>
+      <div class="hc-row">
+        <span class="lbl"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pós-venda</span>
+        <span class="val">Dedicado a você</span>
+      </div>
+      <div class="hc-row">
+        <span class="lbl"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Custo da consultoria</span>
+        <span class="val">R$ 0</span>
+      </div>
+      <a class="btn btn-primary btn-block hc-cta" href="#cotacao">Quero ser atendido</a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ OPERATORS STRIP ============ -->
+<div class="logos" aria-label="Operadoras parceiras">
+  <div class="wrap">
+    <span class="ltxt">Trabalhamos com:</span>
+    <span class="lname">Bradesco</span>
+    <span class="lname">SulAmérica</span>
+    <span class="lname">Amil</span>
+    <span class="lname">Unimed Seguros</span>
+    <span class="lname">MedSênior</span>
+    <span class="lname">Hapvida</span>
+    <span class="lname">DoctorClin</span>
+    <span class="lname">+6</span>
+  </div>
+</div>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num">25</div><div class="cap">Anos de mercado</div></div>
+    <div class="stat reveal"><div class="num">12</div><div class="cap">Operadoras parceiras</div></div>
+    <div class="stat reveal"><div class="num">100<span>%</span></div><div class="cap">Atendimento no Brasil</div></div>
+    <div class="stat reveal"><div class="num">R$0</div><div class="cap">Pela nossa consultoria</div></div>
+  </div>
+</div>
+
+<!-- ============ PLANS ============ -->
+<section class="block" id="planos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Tipos de plano</span>
+      <h2>Escolha o ponto de partida</h2>
+      <p>Cada perfil tem regras, carências e vantagens diferentes. A gente te mostra o caminho mais vantajoso — sem letras miúdas.</p>
+    </div>
+
+    <div class="plans-grid">
+      <article class="plan reveal">
+        <span class="plan-tag">Pessoa física</span>
+        <div class="plan-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Individual &amp; Familiar</h3>
+        <p class="plan-desc">Cobertura para você ou para a família toda, com a melhor relação entre rede credenciada e preço.</p>
+        <ul class="plan-list">
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Inclusão de dependentes</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Opções com e sem coparticipação</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Análise da rede da sua cidade</li>
+        </ul>
+        <a class="btn btn-ghost btn-block plan-link" data-profile="plano individual ou familiar" href="#">Quero este</a>
+      </article>
+
+      <article class="plan featured reveal">
+        <span class="plan-tag">Mais procurado</span>
+        <div class="plan-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21V8l9-5 9 5v13" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 21v-6h6v6M9 11h.01M15 11h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Empresarial (PME)</h3>
+        <p class="plan-desc">A partir de 2 vidas. Preços melhores que o individual e flexibilidade para a sua equipe — nosso foco de especialidade.</p>
+        <ul class="plan-list">
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Valores reduzidos por vida</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Carências reduzidas ou isentas</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Gestão de inclusões e exclusões</li>
+        </ul>
+        <a class="btn btn-wa btn-block plan-link" data-profile="plano empresarial (PME)" href="#">Quero este</a>
+      </article>
+
+      <article class="plan reveal">
+        <span class="plan-tag">Coletivo por adesão</span>
+        <div class="plan-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M14 20c0-2 .8-3.4 2.3-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Coletivo por Adesão</h3>
+        <p class="plan-desc">Para profissionais ligados a entidades de classe. Condições de grupo com vínculo simples e custo competitivo.</p>
+        <ul class="plan-list">
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Elegibilidade verificada por nós</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mensalidades de grupo</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ampla rede nacional</li>
+        </ul>
+        <a class="btn btn-ghost btn-block plan-link" data-profile="plano coletivo por adesão" href="#">Quero este</a>
+      </article>
+
+      <article class="plan reveal">
+        <span class="plan-tag">Empreendedor</span>
+        <div class="plan-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h3>MEI</h3>
+        <p class="plan-desc">Tem CNPJ de MEI? Você pode contratar plano empresarial com condições melhores que as de pessoa física.</p>
+        <ul class="plan-list">
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A partir de 1 vida (titular)</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pode incluir dependentes</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Documentação simplificada</li>
+        </ul>
+        <a class="btn btn-ghost btn-block plan-link" data-profile="plano MEI" href="#">Quero este</a>
+      </article>
+
+      <article class="plan reveal">
+        <span class="plan-tag">60+</span>
+        <div class="plan-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M6 21c0-4 3-6 6-6s6 2 6 6M12 11v4M9 22h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Sênior 60+</h3>
+        <p class="plan-desc">Planos pensados para a terceira idade, com operadoras especializadas como a MedSênior e ampla rede de apoio.</p>
+        <ul class="plan-list">
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Operadoras especialistas em sênior</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acompanhamento próximo</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Orientação sobre carências</li>
+        </ul>
+        <a class="btn btn-ghost btn-block plan-link" data-profile="plano sênior 60+" href="#">Quero este</a>
+      </article>
+
+      <article class="plan reveal">
+        <span class="plan-tag">Não sabe qual?</span>
+        <div class="plan-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 9.5a2.5 2.5 0 014.5 1.5c0 1.5-2 2-2 3.5M12 17.5h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Me ajude a decidir</h3>
+        <p class="plan-desc">Conta o seu momento que a gente compara as opções e indica a mais vantajosa pra você. Esse é o nosso trabalho.</p>
+        <ul class="plan-list">
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Comparativo entre operadoras</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Recomendação personalizada</li>
+          <li class="plan-li"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sem custo e sem compromisso</li>
+        </ul>
+        <a class="btn btn-primary btn-block plan-link" data-profile="quero ajuda para escolher o melhor plano" href="#">Falar com especialista</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="block why" id="diferenciais">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow on-dark">O nosso diferencial</span>
+      <h2>Vender o plano é fácil. O nosso valor está no depois.</h2>
+      <p>Muita corretora some quando o contrato assina. A gente faz o contrário: o atendimento personalizado começa de verdade quando você já é cliente.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="wic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Pós-venda dedicado</h3>
+        <p>Reajuste, troca de plano, uso da rede, reembolso. Você fala com gente que conhece o seu caso.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="wic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M21 7v6M7 9v5c0 1.5 2.7 3 5 3s5-1.5 5-3V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>25 anos de estrada</h3>
+        <p>Já vimos de tudo no mercado de saúde. Esse repertório vira a sua segurança na hora de escolher.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="wic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>12 operadoras, 1 conversa</h3>
+        <p>Em vez de pesquisar uma por uma, você fala com a gente e comparamos todas de uma vez por você.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="wic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Consultoria sem custo</h3>
+        <p>Você paga a mensalidade direto à operadora — o valor é o mesmo. A nossa orientação é gratuita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE / FORM ============ -->
+<section class="block quote" id="cotacao">
+  <div class="wrap quote-grid">
+    <div class="quote-copy reveal">
+      <span class="eyebrow">Cotação online</span>
+      <h2 style="font-family:'Sora';font-weight:700;font-size:clamp(28px,3.2vw,38px);margin:16px 0 14px">Receba sua cotação<br>direto no WhatsApp</h2>
+      <p style="color:var(--muted);font-size:17px">Preencha os campos e enviamos as melhores opções para o seu perfil. Leva menos de um minuto.</p>
+      <ul class="checklist">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Comparamos preço e rede credenciada da sua cidade</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Resposta humana no mesmo dia, sem robô</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sem custo e sem compromisso de contratar</li>
+      </ul>
+      <div class="quote-trust">
+        <span class="av">PC</span>
+        <p><strong>Pedro Aurélio Caceres</strong> e equipe atendem você pessoalmente.<br>(51) 98222-6079 · pedromultisaude@gmail.com</p>
+      </div>
+    </div>
+
+    <form class="card reveal" id="quoteForm" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label class="fl" for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label class="fl" for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Sua cidade / UF" autocomplete="address-level2" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label class="fl" for="whats">WhatsApp</label>
+          <input type="tel" id="whats" name="whats" placeholder="(00) 00000-0000" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label class="fl" for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label class="fl" for="tipo">Tipo de plano</label>
+          <select id="tipo" name="tipo" required>
+            <option value="" selected disabled>Selecione</option>
+            <option>Individual / Familiar</option>
+            <option>Empresarial (PME)</option>
+            <option>Coletivo por Adesão</option>
+            <option>MEI</option>
+            <option>Sênior 60+</option>
+            <option>Não sei / preciso de ajuda</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="fl" for="vidas">Quantidade de vidas</label>
+          <select id="vidas" name="vidas" required>
+            <option value="" selected disabled>Selecione</option>
+            <option>1 vida</option>
+            <option>2 a 3 vidas</option>
+            <option>4 a 10 vidas</option>
+            <option>11 a 29 vidas</option>
+            <option>30+ vidas</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-wa btn-block" style="margin-top:6px">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.97-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Enviar e receber cotação
+      </button>
+      <p class="form-foot">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1112 0v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+        Seus dados são usados apenas para o seu atendimento.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ OPERADORAS ============ -->
+<section class="block" id="operadoras">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Operadoras parceiras</span>
+      <h2>As marcas que confiam na gente</h2>
+      <p style="margin:0 auto">Comparamos as condições de todas elas para encontrar o melhor encaixe pro seu perfil. <span class="star" style="color:var(--accent)">★</span> destaca nossas operadoras prioritárias.</p>
+    </div>
+    <div class="op-grid">
+      <div class="op reveal">Bradesco<span class="star">★</span></div>
+      <div class="op reveal">SulAmérica<span class="star">★</span></div>
+      <div class="op reveal">Amil<span class="star">★</span></div>
+      <div class="op reveal">Unimed Seguros<span class="star">★</span></div>
+      <div class="op reveal">MedSênior<span class="star">★</span></div>
+      <div class="op reveal">Hapvida<span class="star">★</span></div>
+      <div class="op reveal">DoctorClin</div>
+      <div class="op reveal">Sulmed</div>
+      <div class="op reveal">Onmed</div>
+      <div class="op reveal">Select</div>
+      <div class="op reveal">Verte</div>
+      <div class="op reveal">Humana</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="block about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <div class="about-frame">
+        <div class="pat"></div>
+        <span class="quote-mark">”</span>
+        <blockquote>Plano de saúde é uma decisão para anos. Por isso a gente fica do seu lado por todos eles.</blockquote>
+      </div>
+      <div class="about-badge"><div class="n">25</div><div class="c">anos cuidando<br>de pessoas</div></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Sobre a Multi Saúde</span>
+      <h2>Há 25 anos, ajudando brasileiros a escolher melhor.</h2>
+      <p>Somos uma corretora especializada em planos de saúde, com forte atuação em planos empresariais e coletivos por adesão. Em vez de empurrar uma única marca, comparamos as principais operadoras do país e indicamos a opção que realmente faz sentido para o seu perfil e o seu bolso.</p>
+      <p>Nascemos no Rio Grande do Sul e hoje atendemos clientes em todo o Brasil. O que não muda é o jeito de trabalhar: atendimento direto, linguagem clara e um pós-venda que continua presente muito depois da assinatura do contrato.</p>
+      <div class="sign">Pedro Aurélio Caceres<small>Responsável pelo atendimento · Multi Saúde</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Dúvidas frequentes</span>
+      <h2>Antes de cotar, o básico</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq" aria-expanded="false">
+        <button aria-controls="a1">Fazer a cotação tem algum custo?<span class="ic-plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans" id="a1"><p>Não. A cotação e toda a nossa consultoria são gratuitas. Você paga apenas a mensalidade do plano, direto à operadora — e o valor é exatamente o mesmo de contratar por conta própria.</p></div>
+      </div>
+      <div class="faq" aria-expanded="false">
+        <button aria-controls="a2">Com quais operadoras vocês trabalham?<span class="ic-plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans" id="a2"><p>Trabalhamos com 12 operadoras: Bradesco, SulAmérica, Amil, Unimed Seguros, MedSênior, Hapvida, DoctorClin, Sulmed, Onmed, Select, Verte e Humana. Comparamos as condições de cada uma para o seu caso.</p></div>
+      </div>
+      <div class="faq" aria-expanded="false">
+        <button aria-controls="a3">Vocês atendem em todo o Brasil?<span class="ic-plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans" id="a3"><p>Sim. Somos do Rio Grande do Sul e atendemos clientes em todo o país. A disponibilidade de cada plano depende da operadora e da sua cidade — e é justamente isso que verificamos para você na cotação.</p></div>
+      </div>
+      <div class="faq" aria-expanded="false">
+        <button aria-controls="a4">Preciso de CNPJ para plano empresarial ou MEI?<span class="ic-plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans" id="a4"><p>Para o plano empresarial e o MEI, sim — basta um CNPJ ativo, mesmo que seja de MEI. Para o coletivo por adesão, é necessário vínculo com uma entidade de classe. A gente confirma a sua elegibilidade antes de cotar.</p></div>
+      </div>
+      <div class="faq" aria-expanded="false">
+        <button aria-controls="a5">Como funciona o atendimento depois que eu contrato?<span class="ic-plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans" id="a5"><p>É aqui que estamos há 25 anos. Reajustes, dúvidas de rede credenciada, reembolso, inclusão de dependentes ou troca de plano: você fala diretamente com a nossa equipe, que já conhece o seu contrato. Pós-venda é o nosso diferencial.</p></div>
+      </div>
+      <div class="faq" aria-expanded="false">
+        <button aria-controls="a6">Em quanto tempo recebo a resposta?<span class="ic-plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans" id="a6"><p>Normalmente no mesmo dia. Ao enviar a cotação pelo WhatsApp, sua mensagem chega direto à nossa equipe com os seus dados já organizados, o que agiliza bastante o atendimento.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="eyebrow on-dark" style="justify-content:center">Pronto pra começar?</span>
+    <h2 style="margin-top:16px">Sua cotação está a uma mensagem de distância</h2>
+    <p>Sem formulário longo, sem ligação chata. Escolha o seu perfil e fale com a gente agora.</p>
+    <a class="btn btn-wa" href="#cotacao" style="font-size:16px;padding:16px 30px">Fazer minha cotação</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C1 9 2.5 5 6.5 5 9 5 12 7.5 12 7.5S15 5 17.5 5C21.5 5 23 9 21.5 12 19 16.65 12 21 12 21Z" fill="currentColor"/></svg>
+          </span>
+          <span>Multi Saúde<small>Corretora · 25 anos</small></span>
+        </div>
+        <p class="foot-about">Corretora de planos de saúde com 25 anos de mercado. Comparamos as principais operadoras do Brasil e cuidamos de você do início ao pós-venda.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <a href="#planos">Tipos de plano</a>
+        <a href="#operadoras">Operadoras</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+      <div class="foot-col">
+        <h4>Planos</h4>
+        <a href="#cotacao">Individual / Familiar</a>
+        <a href="#cotacao">Empresarial (PME)</a>
+        <a href="#cotacao">Coletivo por Adesão</a>
+        <a href="#cotacao">MEI</a>
+        <a href="#cotacao">Sênior 60+</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <p class="lh"><svg viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3z" stroke="currentColor" stroke-width="1.7"/><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="1.7"/></svg>pedromultisaude@gmail.com</p>
+        <p class="lh"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-3 2c1 2 3 4 5 5l2-3 5 2v4c0 1-1 2-2 2C10 21 3 14 3 6c0-1 1-2 2-2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>(51) 98222-6079</p>
+        <p class="lh"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5-7-10a7 7 0 1114 0c0 5-7 10-7 10z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="11" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>Rio Grande do Sul · Atendimento em todo o Brasil</p>
+        <a class="btn btn-wa" href="#cotacao" style="margin-top:8px;padding:11px 20px;font-size:14px">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Multi Saúde · Corretora de Planos de Saúde. Todos os direitos reservados.</span>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9z"/></svg></a>
+        <a id="footWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.97-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+      </div>
+    </div>
+    <p class="foot-disclaimer">A contratação de planos de saúde está sujeita às regras da ANS e à análise de cada operadora. Coberturas, carências, abrangência e valores variam conforme o produto, a região e o perfil do beneficiário. As informações deste site têm caráter informativo e não substituem as condições contratuais de cada plano.</p>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="wa-pulse" aria-hidden="true"></span>
+  <span class="wa-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.97-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></span>
+  <span class="wa-label">Fale com a gente</span>
+</a>
+
+<script>
+(function(){
+  "use strict";
+  var WA_NUMBER = "5551982226079"; // (51) 98222-6079
+
+  function waLink(msg){
+    return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
+  }
+
+  // Default WhatsApp links
+  var defaultMsg = "Olá! Vim pelo site da Multi Saúde e gostaria de uma cotação de plano de saúde.";
+  ["waFloat","heroWa","footWa"].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.href = waLink(defaultMsg);
+  });
+
+  // Hero profile selector
+  var selected = "";
+  var chips = document.querySelectorAll(".chip");
+  var heroWa = document.getElementById("heroWa");
+  chips.forEach(function(chip){
+    chip.addEventListener("click", function(){
+      var already = chip.getAttribute("aria-pressed") === "true";
+      chips.forEach(function(c){ c.setAttribute("aria-pressed","false"); });
+      if(already){ selected = ""; }
+      else { chip.setAttribute("aria-pressed","true"); selected = chip.dataset.profile; }
+      var msg = selected
+        ? "Olá! Vim pelo site da Multi Saúde e quero uma cotação de plano de saúde para " + selected + "."
+        : defaultMsg;
+      if(heroWa) heroWa.href = waLink(msg);
+    });
+  });
+
+  // Plan card links
+  document.querySelectorAll(".plan-link").forEach(function(link){
+    link.href = waLink("Olá! Vim pelo site da Multi Saúde e tenho interesse em " + link.dataset.profile + ". Pode me passar uma cotação?");
+    link.target = "_blank"; link.rel = "noopener";
+  });
+
+  // Quote form -> WhatsApp
+  var form = document.getElementById("quoteForm");
+  if(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var f = e.target;
+      if(!f.nome.value.trim() || !f.whats.value.trim() || !f.cidade.value.trim() || !f.tipo.value || !f.vidas.value){
+        f.reportValidity();
+        return;
+      }
+      var msg =
+        "*Nova cotação — Multi Saúde*%0A%0A" +
+        "👤 Nome: " + f.nome.value.trim() + "%0A" +
+        "📱 WhatsApp: " + f.whats.value.trim() + "%0A" +
+        "📍 Cidade: " + f.cidade.value.trim() + "%0A" +
+        (f.email.value.trim() ? "✉️ E-mail: " + f.email.value.trim() + "%0A" : "") +
+        "🩺 Tipo de plano: " + f.tipo.value + "%0A" +
+        "👥 Vidas: " + f.vidas.value;
+      window.open("https://wa.me/" + WA_NUMBER + "?text=" + msg, "_blank", "noopener");
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll(".faq button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var item = btn.closest(".faq");
+      var open = item.getAttribute("aria-expanded") === "true";
+      document.querySelectorAll(".faq").forEach(function(f){
+        f.setAttribute("aria-expanded","false");
+        f.querySelector(".ans").style.maxHeight = null;
+      });
+      if(!open){
+        item.setAttribute("aria-expanded","true");
+        var ans = item.querySelector(".ans");
+        ans.style.maxHeight = ans.scrollHeight + "px";
+      }
+    });
+  });
+
+  // Header shadow on scroll
+  var header = document.getElementById("top");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 12) header.classList.add("scrolled");
+    else header.classList.remove("scrolled");
+  }, {passive:true});
+
+  // Mobile menu
+  var toggle = document.getElementById("menuToggle");
+  var menu = document.getElementById("mobileMenu");
+  if(toggle){
+    toggle.addEventListener("click", function(){
+      var open = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    menu.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", function(){ menu.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); });
+    });
+  }
+
+  // Reveal on scroll
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
