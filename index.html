@@ -1,3 +1,7 @@
+https://raw.githubusercontent.com/IraCruger/multisaude-online/main/index.html
+→ https://raw.githubusercontent.com/IraCruger/multisaude-online/main/index.html
+Content-Type: text/plain; charset=utf-8
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -103,13 +107,8 @@
   }
   .brand .mark svg{width:19px;height:19px}
   .brand small{display:block;font-family:'Inter';font-weight:500;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:1px}
-  .nav-links{display:flex;align-items:center;gap:30px}
-  .nav-links a{font-size:14.5px;font-weight:500;color:var(--muted);transition:color .15s}
-  .nav-links a:hover{color:var(--ink)}
   .nav-cta{display:flex;align-items:center;gap:14px}
   .nav-phone{font-family:'Sora';font-weight:600;font-size:14.5px;color:var(--ink)}
-  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
-  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
 
   /* Hero */
   .hero{position:relative;padding:64px 0 72px;overflow:hidden}
@@ -344,12 +343,6 @@
     .about-badge{right:12px;bottom:-14px}
   }
   @media (max-width:720px){
-    .nav-links,.nav-phone{display:none}
-    .menu-toggle{display:block}
-    .mobile-menu{display:none;flex-direction:column;gap:4px;padding:14px 24px 22px;background:var(--surface);border-bottom:1px solid var(--line)}
-    .mobile-menu.open{display:flex}
-    .mobile-menu a{padding:12px 0;font-family:'Sora';font-weight:500;color:var(--ink);border-bottom:1px solid var(--line)}
-    .mobile-menu .btn{margin-top:12px}
     section.block{padding:62px 0}
     .stats .wrap{grid-template-columns:1fr 1fr}
     .plans-grid{grid-template-columns:1fr}
@@ -379,30 +372,9 @@
       </span>
       <span>Multi Saúde<small>Corretora · 25 anos</small></span>
     </a>
-    <nav class="nav-links" aria-label="Principal">
-      <a href="#planos">Planos</a>
-      <a href="#operadoras">Operadoras</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#cotacao">Cotação</a>
-      <a href="#faq">Dúvidas</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
     <div class="nav-cta">
       <span class="nav-phone">(51) 98222-6079</span>
-      <a class="btn btn-primary" href="#cotacao">Fazer cotação</a>
     </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#planos">Planos</a>
-    <a href="#operadoras">Operadoras</a>
-    <a href="#diferenciais">Diferenciais</a>
-    <a href="#cotacao">Cotação</a>
-    <a href="#faq">Dúvidas</a>
-    <a href="#sobre">Sobre</a>
-    <a class="btn btn-primary btn-block" href="#cotacao">Fazer cotação</a>
   </div>
 </header>
 
@@ -920,19 +892,6 @@
     if(window.scrollY > 12) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
   }, {passive:true});
-
-  // Mobile menu
-  var toggle = document.getElementById("menuToggle");
-  var menu = document.getElementById("mobileMenu");
-  if(toggle){
-    toggle.addEventListener("click", function(){
-      var open = menu.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    menu.querySelectorAll("a").forEach(function(a){
-      a.addEventListener("click", function(){ menu.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); });
-    });
-  }
 
   // Reveal on scroll
   if("IntersectionObserver" in window){
